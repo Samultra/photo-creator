@@ -1,0 +1,136 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/img/bg1.jpg'); /* Фон */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow-y: auto;
+  }
+  
+  .container {
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачная подложка */
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    max-height: 90vh; /* Ограничиваем высоту контейнера */
+    overflow: auto; /* Прокрутка, если контент выходит за пределы контейнера */
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  #drop-area {
+    border: 2px dashed white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #drop-area:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  #image-preview {
+    margin: 20px 0;
+    max-height: 70vh; /* Ограничиваем максимальную высоту блока с изображением */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #image {
+    max-width: 100%;
+    max-height: 70vh; /* Ограничиваем изображение по высоте и ширине, чтобы оно полностью помещалось на экран */
+    object-fit: contain; /* Сохраняем пропорции изображения */
+  }
+  
+  /* Стили кнопок */
+  #filters button, 
+  #crop-btn, 
+  #save-btn, 
+  #rotate-btn, 
+  #flip-horizontal-btn, 
+  #flip-vertical-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  #filters button:hover, 
+  #crop-btn:hover, 
+  #save-btn:hover, 
+  #rotate-btn:hover, 
+  #flip-horizontal-btn:hover, 
+  #flip-vertical-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05); /* Лёгкое увеличение при наведении */
+  }
+  
+  #rotate-btn, 
+  #flip-horizontal-btn, 
+  #flip-vertical-btn {
+    background-color: #007bff;
+    border-radius: 50px;
+  }
+  
+  #rotate-btn:hover, 
+  #flip-horizontal-btn:hover, 
+  #flip-vertical-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  #rotate-btn {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #flip-horizontal-btn {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  #flip-vertical-btn {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Дополнительные стили для ползунков */
+  #adjustments {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #adjustments label {
+    display: block;
+    margin: 10px 0;
+    color: white;
+  }
+  
+  body, html {
+    height: 100%;
+    overflow: auto;
+  }
+  

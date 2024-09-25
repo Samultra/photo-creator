@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактор изображений</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Редактор изображений</h1>
+
+    <!-- Drag and Drop Area -->
+    <div id="drop-area">
+      <p>Перетащите сюда изображение или загрузите файл</p>
+      <input type="file" id="file-input" accept="image/*" />
+    </div>
+
+    <!-- Image Preview -->
+    <div id="image-preview">
+      <img id="image" src="" alt="Ваше изображение">
+    </div>
+
+    <!-- Image Filters -->
+    <div id="filters">
+      <button onclick="applyFilter('grayscale(1)')" class="styled-btn">Чёрно-белый</button>
+      <button onclick="applyFilter('sepia(1)')" class="styled-btn">Сепия</button>
+      <button onclick="applyFilter('invert(1)')" class="styled-btn">Инверсия</button>
+      <button onclick="resetFilters()" class="styled-btn">Сброс фильтров</button>
+    </div>
+
+    <!-- Дополнительные эффекты -->
+    <div id="adjustments">
+      <label>Яркость: <input type="range" id="brightness" min="0" max="200" value="100"></label>
+      <label>Контраст: <input type="range" id="contrast" min="0" max="200" value="100"></label>
+      <label>Насыщенность: <input type="range" id="saturation" min="0" max="200" value="100"></label>
+      <button onclick="rotateImage(90)" id="rotate-btn" class="styled-btn">Повернуть на 90°</button>
+      <button onclick="flipImage('horizontal')" id="flip-horizontal-btn" class="styled-btn">Отразить по горизонтали</button>
+      <button onclick="flipImage('vertical')" id="flip-vertical-btn" class="styled-btn">Отразить по вертикали</button>
+    </div>
+
+    <!-- Cropper Control -->
+    <button id="crop-btn" class="styled-btn">Обрезать</button>
+
+    <!-- Save Image -->
+    <button id="save-btn" class="styled-btn">Сохранить изображение</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
